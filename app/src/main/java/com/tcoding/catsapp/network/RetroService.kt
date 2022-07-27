@@ -1,5 +1,6 @@
 package com.tcoding.catsapp.network
 
+import com.tcoding.catsapp.model.Cat
 import com.tcoding.catsapp.model.CatInfo
 import retrofit2.Call
 import retrofit2.Response
@@ -9,6 +10,6 @@ interface RetroService {
 
 
     @GET("v1/breeds")
-    suspend fun getCats(): Response<CatInfo>
+    fun getCats(): Call<Cat>
 
 }
